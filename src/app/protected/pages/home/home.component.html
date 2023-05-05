@@ -1,0 +1,43 @@
+<section class="container">
+  <div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#addCharacter">
+      Agregar personaje
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addCharacter" tabindex="-1" aria-labelledby="modalAddCharacter" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-5" id="modalAddCharacter">Guardar personaje</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="name">Nombre</label>
+            <input #name type="text" class="form-control" id="name" placeholder="Ej: Rick Sanchez">
+
+            <label for="name">Especie</label>
+            <input #specie type="text" class="form-control" id="specie" placeholder="Ej: Humano">
+
+            <label for="name">Estado</label>
+            <input #status type="text" class="form-control" id="status" placeholder="Ej: Vivo">
+            
+            <label for="name">Ubicación</label>
+            <input #location type="text" class="form-control" id="location" placeholder="Ej: Citadel of Ricks">
+
+            <label for="name">Origen</label>
+            <input #origin type="text" class="form-control" id="origin" placeholder="Ej: Earth (C-137) ">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="saveCharacter()" data-bs-dismiss="modal">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-table-characters></app-table-characters>
+
+  </div>
+</section>

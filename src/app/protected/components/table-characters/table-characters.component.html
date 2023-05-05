@@ -1,0 +1,30 @@
+
+<table class="table table-striped">
+   <thead>
+      <tr>
+         <th>Nombre</th>
+         <th>Especie</th>
+         <th>Estado</th>
+         <th>Ubicación</th>
+         <th>Origen</th>
+         <th>Acciones</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr *ngFor="let char of arrCharacters">
+         <td class="text-capitalize"> {{ char.name }} </td>
+         <td class="text-capitalize"> {{ char.species }} </td>
+         <td class="text-capitalize"> {{ char.status }} </td>
+         <td class="text-capitalize"> {{ char.location }} </td>
+         <td class="text-capitalize"> {{ char.origin }} </td>
+         <td>
+            <button type="button" class="btn-primary rounded mr-2 mb-2 w-75">
+               Editar
+            </button>
+            <button type="button" class="btn-danger rounded w-75" (click)="borrarRegistro(char.id)">
+               Eliminar
+            </button>
+         </td>
+      </tr>
+   </tbody>
+ </table>
